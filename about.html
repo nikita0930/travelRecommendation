@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom - About Us</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    .page {
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(8, 29, 43, 0.45), rgba(8, 29, 43, 0.45)),
+        url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      background-color: rgba(11, 35, 49, 0.95);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .brand a,
+    .nav-links a,
+    .social-links a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 2px solid #ffffff;
+      border-radius: 4px;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .content {
+      display: flex;
+      gap: 28px;
+      padding: 56px 40px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      font-size: 1.4rem;
+      padding-top: 90px;
+    }
+
+    .about-main {
+      width: 100%;
+      max-width: 1120px;
+    }
+
+    .about-main h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .panel {
+      background-color: rgba(5, 16, 26, 0.46);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .panel p {
+      line-height: 1.6;
+      margin-bottom: 12px;
+      max-width: 980px;
+    }
+
+    .team-section {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .team-title {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .member {
+      text-align: center;
+      padding: 18px 14px;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+
+    .avatar {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      color: #12344d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .member h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .member p {
+      line-height: 1.5;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+
+    .role {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background-color: #169783;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .content {
+        flex-direction: column;
+        padding: 40px 24px;
+      }
+
+      .social-links {
+        flex-direction: row;
+        padding-top: 0;
+      }
+
+      .about-main h1 {
+        font-size: 2.8rem;
+      }
+
+      .team-section {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <nav>
+      <div class="brand">
+        <a class="brand-icon" href="travel_recommendation.html">TB</a>
+        <a href="travel_recommendation.html">TravelBloom</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="travel_recommendation.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="social-links">
+        <a href="#" aria-label="Twitter">T</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">I</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+
+      <div class="about-main">
+        <h1>About Us</h1>
+
+        <div class="panel">
+          <p>
+            Welcome to TravelBloom. We are a travel-focused company passionate about helping
+            people discover unforgettable destinations, meaningful cultural experiences, and
+            stress-free trip ideas through one easy-to-use platform.
+          </p>
+          <p>
+            Our mission is to make travel planning simpler and more inspiring. We believe in
+            creativity, reliability, and customer-first service, and we work together to
+            deliver recommendations that help every traveler feel confident about their next adventure.
+          </p>
+          <p>
+            From city escapes to nature retreats, our goal is to connect users with places
+            that match their interests, budget, and travel style.
+          </p>
+        </div>
+
+        <div class="panel team-section">
+          <div class="team-title">Our Team</div>
+
+          <div class="team-grid">
+            <div class="member">
+              <div class="avatar">JD</div>
+              <h3>John Doe</h3>
+              <p>John shapes the overall company direction and ensures TravelBloom stays focused on user value.</p>
+              <span class="role">CEO</span>
+            </div>
+
+            <div class="member">
+              <div class="avatar">CT</div>
+              <h3>Celina Thomas</h3>
+              <p>Celina leads technical planning and keeps the platform reliable, modern, and easy to use.</p>
+              <span class="role">Team Lead</span>
+            </div>
+
+            <div class="member">
+              <div class="avatar">MT</div>
+              <h3>Mike Tyson</h3>
+              <p>Mike coordinates delivery timelines and partnerships to make sure projects move smoothly.</p>
+              <span class="role">Delivery Head</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

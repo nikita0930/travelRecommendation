@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(8, 29, 43, 0.35), rgba(8, 29, 43, 0.35)),
+        url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      background-color: rgba(11, 35, 49, 0.95);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 2px solid #ffffff;
+      border-radius: 4px;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a,
+    .brand a,
+    .social-links a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background-color: #ffffff;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      min-width: 240px;
+      color: #333333;
+    }
+
+    .search-bar button {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 14px;
+      background-color: #1aa39a;
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 90px 40px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      font-size: 1.4rem;
+      margin-right: 8px;
+    }
+
+    .intro {
+      max-width: 620px;
+    }
+
+    .intro h1 {
+      font-size: 4rem;
+      line-height: 1.05;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .intro p {
+      max-width: 560px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      background-color: rgba(0, 0, 0, 0.28);
+      padding: 12px 14px;
+    }
+
+    .intro .cta {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 4px;
+      background-color: #169783;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .results {
+      padding: 0 40px 48px 96px;
+    }
+
+    .results h2 {
+      margin-bottom: 18px;
+      color: #ff8a1f;
+      font-size: 2.2rem;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .result-card {
+      overflow: hidden;
+      border-radius: 14px;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #12344d;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    .result-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .result-card-content {
+      padding: 18px;
+    }
+
+    .result-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .result-card p {
+      color: #35566e;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .result-card button {
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      background-color: #169783;
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .results-status {
+      max-width: 420px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background-color: rgba(5, 16, 26, 0.55);
+      line-height: 1.5;
+    }
+
+    .results-panel {
+      display: none;
+    }
+
+    .results-panel.active {
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 24px;
+      }
+
+      .social-links {
+        flex-direction: row;
+      }
+
+      .intro h1 {
+        font-size: 2.8rem;
+      }
+
+      .search-bar {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .search-bar input {
+        min-width: 180px;
+        width: 100%;
+      }
+
+      .results {
+        padding: 0 24px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <nav>
+      <div class="brand">
+        <a class="brand-icon" href="travel_recommendation.html">TB</a>
+        <a href="travel_recommendation.html">TravelBloom</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="travel_recommendation.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="search-bar">
+        <input id="search-input" type="text" placeholder="Enter a destination or keyword">
+        <span aria-hidden="true">Search</span>
+        <button id="search-button" type="button">Search</button>
+        <button id="reset-button" type="button">Clear</button>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="social-links">
+        <a href="#" aria-label="Twitter">T</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">I</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+
+      <div class="intro">
+        <h1>Explore Dream Destination</h1>
+        <p>
+          TravelBloom helps you discover beautiful places, unique cultural experiences,
+          and memorable adventures around the world. Search for destinations, browse
+          recommendations, and plan your next journey with a simple, friendly travel guide.
+        </p>
+        <a class="cta" href="#">Book Now</a>
+      </div>
+    </div>
+
+    <section class="results">
+      <div id="results-container" class="results-status">
+        Search for a country, city, beach, or temple to see recommendations.
+      </div>
+    </section>
+  </section>
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
